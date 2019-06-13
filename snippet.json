@@ -1,0 +1,14 @@
+{
+  "8a4ae0d1-12d2-4424-bd55-42a40bf8ae76": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "VirtualMachine",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1560428902038,
+    "name": "VM on Local Datastore",
+    "formula": "min(${adaptertype=VMWARE, objecttype=Datastore, metric=System Attributes|availability, depth=1, where = \"summary|isLocal equals true\"})",
+    "description": "Identifies whether the VM is on a local datastore.\n\n1 = Yes\n0 = No\n"
+  }
+}
